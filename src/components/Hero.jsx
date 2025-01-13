@@ -25,7 +25,7 @@ const Hero = () => {
 
 console.log(isInView);
   return (
-    <div ref={ref}>
+    <div ref={ref} id='home'>
     <div style={backgroundStyle} />
         <div className='max-w-5xl mx-auto flex flex-row pt-48'>
                 {/* Section 1 */}

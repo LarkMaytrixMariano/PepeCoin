@@ -6,7 +6,7 @@ const SectionThree = () => {
     const ref= useRef(null);
     const isInView = useInView(ref);
   return (
-    <div ref={ref} className='max-w-6xl mx-auto'>
+    <div ref={ref} className='max-w-6xl mx-auto' id="token">
         <h2 className='text-center text-6xl mt-24'>TOKENOMICS</h2>
 
         <div className='flex flex-row my-20'>

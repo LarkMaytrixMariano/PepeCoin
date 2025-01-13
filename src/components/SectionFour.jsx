@@ -6,7 +6,7 @@ const SectionFour = () => {
     const ref= useRef(null);
     const isInView = useInView(ref);
   return (
-    <div ref={ref} className='max-w-6xl mx-auto my-20'>
+    <div ref={ref} className='max-w-6xl mx-auto my-20' id="roadmap">
         <div className='grid grid-cols-3 gap-20'>
             <motion.div
                 initial={{opacity: 0, x: -100, y: -138, rotate: 180}}

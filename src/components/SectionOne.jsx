@@ -9,7 +9,7 @@ const SectionOne = () => {
   const isInView = useInView(ref);
 
   return (
-    <div ref={ref} className='max-w-5xl mx-auto my-36'>
+    <div ref={ref} className='max-w-5xl mx-auto my-36' id="about">
       <div className='flex flex-row gap-10'>
       <div className='flex-1'>
         <motion.img 

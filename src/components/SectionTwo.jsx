@@ -37,7 +37,7 @@ const SectionTwo = () => {
     }, []);
   
   return (
-    <div className='max-w-6xl mx-auto my-36' ref={ref}>
+    <div className='max-w-6xl mx-auto my-36' ref={ref} id="buy">
         <motion.h2
                 initial={{opacity: 0, y: -50}}
                 animate={{opacity: isInView ? 1 : 0 ,y: isInView ? 0 : -50  }}

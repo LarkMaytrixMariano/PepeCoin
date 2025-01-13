@@ -2,6 +2,7 @@ import React, { useRef } from 'react'
 
 import { motion, useInView } from 'framer-motion';
 import Card from '../elements/Card';
+import { useState, useEffect } from 'react';
 
 
 const styles = {
@@ -17,6 +18,24 @@ const styles = {
 const SectionTwo = () => {
     const ref= useRef(null);
     const isInView = useInView(ref);
+
+
+    const [isInViewport, setIsInViewport] = useState(false);
+
+    useEffect(() => {
+      const onScroll = () => {
+        const iframeSection = document.getElementById('section-two');
+        if (iframeSection && iframeSection.getBoundingClientRect().top <= window.innerHeight) {
+          setIsInViewport(true);
+        } else {
+          setIsInViewport(false);
+        }
+      };
+  
+      window.addEventListener('scroll', onScroll);
+      return () => window.removeEventListener('scroll', onScroll);
+    }, []);
+  
   return (
     <div className='max-w-6xl mx-auto my-36' ref={ref}>
         <motion.h2
@@ -38,13 +57,16 @@ const SectionTwo = () => {
 
 
     <div className='flex flex-row'>
-        <div className='flex-1'>
-            <iframe
-            src="https://app.uniswap.org/#/swap?exactField=input&exactAmount=10&inputCurrency=0x6b175474e89094c44da98b954eedeac495271d0f"
-            height="660px"
-            width="100%"
-            style={styles}
-            />
+        <div className='flex-1' id="section-two">
+            {/* Other components */}
+            {isInViewport && (
+                <iframe
+                src="https://app.uniswap.org/#/swap?exactField=input&exactAmount=10&inputCurrency=0x6b175474e89094c44da98b954eedeac495271d0f"
+                height="660px"
+                width="100%"
+                style={styles}
+                />
+            )}
         </div>
 
         <motion.div

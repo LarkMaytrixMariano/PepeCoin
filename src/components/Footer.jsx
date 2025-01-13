@@ -3,7 +3,7 @@ import React from 'react'
 const Footer = () => {
   return (
 <div className='max-w-full mx-auto font-sans'>
-    <div className='max-w-3xl mx-auto'>
+    <div className='max-w-3xl mx-auto mb-2'>
         <div className='flex flex-row gap-10 justify-center mb-10'>
             <img 
                 src='https://static.wixstatic.com/media/1f3f2b_f59a557a4c72456581fa206a9247dcac~mv2.png/v1/fill/w_85,h_85,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/twtttt.png'
@@ -24,7 +24,7 @@ const Footer = () => {
         </p>
     </div>
     
-    <div className='w-full border-t border-gray-500 shadow-2xl shadow-black py-3 bg-[#3a963d] mt-6'>
+    <div className='w-full border-t border-gray-500 shadow-2xl shadow-black py-3 bg-[#3a963d] mt-5'>
         <div className='max-w-3xl mx-auto'>
             <p className='leading-10 text-center text-sm text-black font-semibold'>&#169; 2024 by Pepe. All rights reserved!</p>
         </div>
